@@ -1,0 +1,14 @@
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: python-app-route
+spec:
+  http:
+  - name: all
+    match:
+      paths:
+      - /api/v1/healthz
+      - /api/v1/info
+    backends:
+    - serviceName: python-app
+      servicePort: 8080

@@ -1,0 +1,6 @@
+apisix:
+  ssl:
+    enable: false
+    listen: []
+ingress-controller:
+  enableHTTPS: false
