@@ -28,6 +28,7 @@ jobs:
           push: true
           tags: arun406/python-app:${{ env.COMMIT_ID }}
   cd:
+    needs: ci
     runs-on: self-hosted
     steps:
       - name: Install argocd
